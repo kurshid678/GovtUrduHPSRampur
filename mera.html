@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.6.1/tabletop.min.js"></script>
+  <title>Google Sheets Data</title>
+</head>
+<body>
+
+  <label for="display-type">Select Display Type:</label>
+  <select id="display-type" onchange="fetchData()">
+    <option value="list">List</option>
+    <option value="table">Table</option>
+  </select>
+
+  <div id="data-container"></div>
+
+  <script>
+    function init() {
+      Tabletop.init({
+        key: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vR8MPEadFhvXsY9ZiRgwrDdIcXGHylkvxioXThSaQH8v_uGdRe9XovJ7cE6xNdBqTRgYexDchMEY0on/pubhtml?gid=1962843803&single=true', // Replace with your published sheet URL
+        callback: displayData,
+        simpleSheet: true
+      });
+    }
+
+    function displayData(data, tabletop) {
+      var output = '';
+
+      if (data.length > 0) {
+        if (document.getElementById('display-type').value === 'list') {
+          for (var i = 0; i < data.length; i++) {
+            output += '<p>' + data[i].Column1 + ' | ' + data[i].Column2 + '</p>';
+            // Replace Column1, Column2, etc., with the actual column names in your sheet.
+          }
+        } else if (document.getElementById('display-type').value === 'table') {
+          output += '<table border="1"><tr><th>Column1</th><th>Column2</th></tr>';
+          for (var i = 0; i < data.length; i++) {
+            output += '<tr><td>' + data[i].Column1 + '</td><td>' + data[i].Column2 + '</td></tr>';
+            // Replace Column1, Column2, etc., with the actual column names in your sheet.
+          }
+          output += '</table>';
+        }
+      } else {
+        output = '<p>No data found.</p>';
+      }
+
+      document.getElementById('data-container').innerHTML = output;
+    }
+
+    function fetchData() {
+      init();
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+      init();
+    });
+  </script>
+
+</body>
+</html>

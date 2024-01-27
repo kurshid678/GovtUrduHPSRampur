@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=viewport-width height=viewport-height initial-scale=1.0">
+<title>
+grid mamu
+
+</title>
+<style>
+  body {
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+    
+    .container {
+    width: 100vw;
+    height: 200vh;
+    background-color: rgba(0,0,0,0.2);
+    color: rgb(0, 0, 0);
+    display: grid;
+    grid-template-columns: 22vw 50vw 22vw;
+    grid-template-rows: 15vh 60vh;
+    grid-template-areas: "a b c"
+    "d e e";
+    gap: 3px;
+    padding-top: 10px;
+    padding-left: 5px;
+    
+    
+    
+    }
+    
+    .container0  {
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    padding-top: 30px;
+    border-radius: 10px;
+    
+    
+    }
+    .mas1{
+    grid-area: e;
+    padding-left: 50px;
+    height: 150vh;
+    
+    }
+    .mas2 {
+        grid-area: c;
+    }
+    .mas5{
+        grid-area: b;
+        border-left: 5px outset #000000;
+        border-bottom: #000000 5px inset;
+        background-color: #368396;
+    }
+    .mas4{
+        box-shadow: 0px 5px 10px rgba(0,0,0,0.5);
+        height: 150vh;
+    }
+    .mas5:hover{
+    transform: scale3d(1,1.05,1.05);
+    cursor: default;
+    
+    }
+    
+    h1 {
+    font-size: larger;
+    color: #eee;
+    }
+    
+    .dropbtn {
+      background-color: rgba(0,0,0,0.1);
+      color: white;
+      padding: 16px;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+      border-radius: 10px;
+    }
+    
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+    
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #64f87c;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+      border-radius: 20px;
+      color: #eee;
+    }
+    
+    .dropdown-content a {
+      color: rgb(0, 0, 0);
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      border-radius: 10px;
+    }
+    
+    .dropdown-content a:hover {background-color: #ff2121;
+    color: #eee;
+    transform: scale(1.05);
+    }
+    
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    
+    .dropdown:hover .dropbtn {
+      background-color: #fff;
+    }
+    
+    
+    .next{
+    width: 100vw;
+    height: 500px;
+    display: grid;
+    gap: 90px;
+    grid-template-columns: 200px 200px 200px 200px;
+    grid-template-rows: 200px 400px;
+    grid-template-areas: "a b c d"
+                         "e f g h";
+    padding-left: 50px;
+    padding-top: 20px;
+    
+    }
+    .not1{
+    width: 200px;
+    height: 200px;
+    background-color: aqua;
+    grid-area: c;
+    
+    
+    }
+    .not2{
+    width: 200px;
+    height: 200px;
+    background-color: aqua;
+    
+    
+    }
+    .not3{
+    width: 200px;
+    height: 200px;
+    background-color: aqua;
+    grid-area: a;
+    
+    
+    
+    
+    }
+    
+    .not4{
+    width: 200px;
+    height: 200px;
+    background-color: rgb(187, 224, 224);
+    
+    }
+    .not5{
+    width: 200px;
+    height: 200px;
+    background-color: aqua;
+    
+    }
+    .not6{
+    width: 200px;
+    height: 200px;
+    background-color: aqua;
+    
+    }
+    .not7{
+    width: 200px;
+    height: 200px;
+    background-color: aqua;
+    
+    }
+    .not8{
+    width: 200px;
+    height: 200px;
+    background-color: aqua;
+    
+    }
+    .next0{
+    box-shadow: -5px -5px 0px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    text-align: center;
+    background-color: #f7e75a;
+    transition: background-color 0.4s ease;
+    
+    
+    }
+    .next0:hover{
+    background-color: #368396;
+    transform: scale(1.05);
+    
+    
+    }
+h{
+float: left;
+margin-left: 40px;.
+color: #000;
+font-size: 25px;
+margin-top: 16px;
+
+}
+
+    
+</style>
+
+
+
+</head>
+<body>
+
+<div class="container">
+<div class="container0 mas1">
+    <iframe id="myIframe1" width="750" height="600" src="https://docs.google.com/forms/d/e/1FAIpQLSdoDGLeNRDN-CacSEWA2Z3l1RPx4Eb1xcrzMK3ZUbWEwrfyqA/viewform?embedded=true" frameborder="0"></iframe>
+    <iframe id="myIframe2" width="750" height="600" src="https://docs.google.com/spreadsheets/d/1CN68gsqmnYDABf_7lLTyQ8o-zSG0upPG6rm0VNpk2OI/edit?usp=sharing" frameborder="0" style="display: none;"></iframe>
+    <iframe id="myIframe3" width="750" height="600" src="iframe3.html" frameborder="0" style="display: none;"></iframe>
+
+</div>
+<div class="container0 mas2">
+   <h>open </h>
+    <div class="dropdown">
+    <button class="dropbtn"><image src="drop1.png" width="35px" height="32px"></image></button>
+    <div class="dropdown-content">
+        <a href="#" onclick="changeIframe('myIframe1', 'https://docs.google.com/forms/d/e/1FAIpQLSdoDGLeNRDN-CacSEWA2Z3l1RPx4Eb1xcrzMK3ZUbWEwrfyqA/viewform?embedded=true')">Lc form</a>
+        <a href="https://docs.google.com/spreadsheets/d/1CN68gsqmnYDABf_7lLTyQ8o-zSG0upPG6rm0VNpk2OI/edit?usp=sharing" onclick="changeIframe('myIframe2', '')">genrate Lc</a>
+        <a href="#" onclick="changeIframe('myIframe3', 'iframe3.html')">3</a>
+    </div>
+  </div>
+</div>
+<div class="container0 mas3"><image src="logo.png" width="70px" height="60px"></image>
+
+
+
+</div>
+<div class="container0 mas4"><p>
+    Namma shaale nanna koduge, with<br> the literal meaning of 'our school,<br>  my contribution' is a call-to-action inviting everyone <br> to 'come forward'; 'collaborate; 'cooperate' <br> and 'co-create' a strengthened public education ecosystem <br> across government schools in karnataka
+
+
+
+
+</p></div>
+<div class="container0 mas5"><h1>Govt Urdu hps Rampur</h1></div>
+
+</div>
+<div class="next">
+  <div class="next0 not1"><span><h>1</h></span></div>
+  <div class="next0 not2">2</div>
+  <div class="next0 not3">3</div>
+  <div class="next0 not4">4</div>
+  <div class="next0 not5">5</div>
+  <div class="next0 not6">6</div>
+  <div class="next0 not7">7</div>
+  <div class="next0 not8">8</div>
+ 
+ </div>
+
+
+<script>
+    function changeIframe(iframeId, src) {
+      // Hide all iframes
+      document.getElementById('myIframe1').style.display = 'none';
+      document.getElementById('myIframe2').style.display = 'none';
+      document.getElementById('myIframe3').style.display = 'none';
+
+      // Show the selected iframe
+      document.getElementById(iframeId).style.display = 'block';
+
+      // Change the src of the selected iframe
+      document.getElementById(iframeId).src = src;
+    }
+  </script>
+</body>
+
+
+
+</html>

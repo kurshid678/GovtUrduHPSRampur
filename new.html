@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=viewport-width height=viewport-height initial-scale=1.0">
+
+<title>
+
+    wahab
+</title>
+<style>
+
+body{
+background-color: rgb(196, 247, 145);
+padding: 10px;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+font-size: larger;
+background-image: url('background2.jpg');
+background-size: cover;
+}
+.container {
+background-color: rgba(222, 184, 135,0.2);
+height: 500px;
+
+}
+.column1{
+background-color: rgb(245, 230, 230);
+float: right;
+margin-right: 10px;
+width:70vw;
+height: 70vh;
+border-radius: 10px;
+margin-top: 10px; 
+border-top: 5px outset rgb(5, 5, 5); 
+border-right: 3px outset  rgb(29, 27, 27);
+box-shadow: 10px 2px 30px rgba(0,0,0,0.5);
+transition: background-color 0.5s ease;
+color: black;
+}
+
+.column2{
+background-color: rgb(241, 224, 224);
+float: left;
+margin-left: 50px; 
+width:20vw;
+height: 70vh;
+border-radius: 10px;
+margin-top: 10px;
+border-top: 5px outset rgb(5, 5, 5); 
+border-right: 3px outset  rgb(29, 27, 27);
+box-shadow: 10px 2px 30px rgba(0,0,0,0.5);
+transition: background-color 0.5s ease;
+display: flex;
+align-items: center;
+justify-content: center;
+
+}
+
+.column2:hover{
+background-color: #e8f5e8;
+color: #eee;
+
+}
+
+.column1:hover{
+background-color: #285fa8;
+color: #eee;
+
+}
+header{
+background-color: #eee;
+border-bottom: 3px inset black;
+border-right: 3px inset black;
+
+}
+.container2 {
+      display: flex;
+      justify-content: space-between;
+      margin: 20px;
+      
+    }
+    .iframe-container {
+      width: 100%;
+      height: 430px;
+      overflow: hidden;
+      border: 1px solid #ccc;
+      align-items: center;
+      
+    }
+
+    .iframe-container iframe {
+      width: 100%;
+      height: 100%;
+      border: 5;
+      align-self: center;
+    }
+    .button-container {
+      margin-top: 20px;
+      text-align: center;
+      width: 80%;
+      height: 90%;
+      background-color: #221e1e;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      justify-content: space-evenly;
+      border-radius: 10px;
+    }
+
+    .switch-button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 5px;
+      background-color: #ff4242;
+      color: #eee;
+      border-radius: 6px;
+      transition: background-color 0.5s ease;
+      
+    }
+    .switch-button:hover{
+     background-color: #e8f5e8;
+     color:#221e1e;
+     transform: scale3d(1.01,1.03,0.5)
+
+
+    }
+
+  
+
+</style>
+</head>
+
+<body>
+<header><h1>Govt Urdu Hps Rampur </h1></header>
+    <div class="container">
+        
+        <div class="column1" id="column1">
+        
+            <div class="container2">
+                <div class="iframe-container" id="iframe1">
+                  <iframe src="mybest1.html" frameborder="0"></iframe>
+                </div>
+                <div class="iframe-container" id="iframe2">
+                  <iframe src="contact.html" frameborder="0"></iframe>
+                </div>
+                <div class="iframe-container" id="iframe3">
+                  <iframe src="index.html" frameborder="0"></iframe>
+                </div>
+                <div class="iframe-container" id="iframe4">
+                  <iframe src="http://localhost:5500/new.html" frameborder="0"></iframe>
+                </div>
+              </div>
+      
+        </div>
+        <div class="column2" id="column2"> 
+            <div class="button-container">
+                <button class="switch-button" onclick="switchIframe('iframe1')">Page 1</button>
+                <button class="switch-button" onclick="switchIframe('iframe2')">Page 2</button>
+                <button class="switch-button" onclick="switchIframe('iframe3')">Page 3</button>
+                <button class="switch-button" onclick="switchIframe('iframe4')">Page 4</button>
+              </div>
+        </div>
+      </div>
+
+
+
+    
+
+        <script>
+            function switchIframe(iframeId) {
+              // Hide all iframes
+              document.querySelectorAll('.iframe-container').forEach(function(iframe) {
+                iframe.style.display = 'none';
+              });
+        
+              // Show the selected iframe
+              document.getElementById(iframeId).style.display = 'block';
+            }
+            
+            switchIframe('iframe1');
+            
+          </script>
+
+
+
+
+</body>
+
+
+
+
+
+
+
+
+
+</html>

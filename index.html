@@ -14,19 +14,20 @@ display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: center;
-background: linear-gradient(to left,#d8e4e9,#dbe1e3);
-);
-
+background:linear-gradient(to left,#1d1616,#8dbefff8);
 
 }
 
   .login-container {
-            background-color: rgb(219,225,227,0.5);
-            border-radius: 20px;
+            background-color: rgb(176,184,186,0.2);
+            border-radius: 90px;
             box-shadow: 15px 15px 40px rgba(0,0,0,0.8);
             overflow: hidden;
             width: 600px;
-            border: 7px outset rgba(0,0,0,0.7);
+            border: 7px outset rgba(134, 189, 235, 0.7);
+            border-left:outset #7fb2ff;
+            border-top: outset #7fb2ff;
+            border-right: outset #ffce85;
             
       
         }
@@ -38,20 +39,22 @@ background: linear-gradient(to left,#d8e4e9,#dbe1e3);
 
         h1 {
                text-align: center;
-                color:#000; /* Updated heading color */
-                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+                color:#ffffff; /* Updated heading color */
+               text-shadow: -3px -3px 0px rgba(0, 0, 0, 0.5);
                 filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
                 margin: 0;
+                text-decoration: dotted;
         }
 
         label {
             display: block;
             margin-bottom: 5px;
-            color: #000;
+            color: #ffffff;
             text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
             font-size:30px;
             border: 1px solid rgb(255, 255,255,0.1);
             filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.2));
+            text-shadow: -2px -2px 0px rgba(255, 236, 236, 0.2);
         }
 
         input {
@@ -63,15 +66,16 @@ background: linear-gradient(to left,#d8e4e9,#dbe1e3);
             border-radius: 10px;
             box-sizing: border-box; /* Added box-sizing for better input styling */
             box-shadow:0 0 10px rgba(0,0,0,0.3);
-            background-color: rgba(255,255,255,0.5);
+            background-color: rgba(255, 249, 249, 0.9);
+
         }
 
    .button {
   display: inline-block;
   border-radius: 10px;
-  background-color: #f45110;
+  background-color: #ff7979;
   border: none;
-  color: #FFFFFF;
+  color: #fffafa;
   text-align: center;
   font-size: 28px;
   padding: 15px;
@@ -106,25 +110,35 @@ background: linear-gradient(to left,#d8e4e9,#dbe1e3);
   opacity: 1;
   right: 0;
 }
+#toggle-password{
+background-color: #fff;
+padding: 1px;
 
+}
 </style>
 </head>
 
 <body>
+<div class="login-container">
+    <h1>Govt Urdu Hps School Rampur</h1>
+    <form class="login-form" onsubmit="return validateForm()">
+        <h1>Login</h1>
+        <label for="username" aria-placeholder="enter username">Username:</label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="password">Password:</label>
+        <div class="password-container">
+            <input type="password" id="password" name="password" required aria-placeholder="enter Password">
+            <button class="but" type="button" id="toggle-password" onclick="togglePasswordVisibility()">Show Password</button>
+        </div>
+
+        <p class="error" id="error-msg"></p>
+        <button class="button" type="submit"><span>Login</span></button>
+    </form>
+</div>
 
 
- <div class="login-container">
-        <h1>Govt Urdu Hps School Rampur</h1>
-        <form class="login-form" onsubmit="return validateForm()">
-            <h1>Login</h1>
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username" required>
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required>
-            <p class="error" id="error-msg"></p>
-            <button class="button"  type="submit"><span>Login</span></button>
-        </form>
-    </div>
+ 
 <script>
         function validateForm() {
             var username = document.getElementById('username').value;
@@ -133,7 +147,7 @@ background: linear-gradient(to left,#d8e4e9,#dbe1e3);
 
             if (username === 'Lad' && password === 'sir') {
                 errorMsg.innerHTML = ''; // Clear any previous error message
-                window.location.href = 'govt.html';
+                window.location.href = 'newwebapp.html';
                 return false; // Prevent form submission (optional)
             } else {
                 errorMsg.innerHTML = 'Invalid username or password';
@@ -141,9 +155,27 @@ background: linear-gradient(to left,#d8e4e9,#dbe1e3);
             }
         }
     </script>
+<script>
+    function togglePasswordVisibility() {
+        var passwordField = document.getElementById("password");
+        var toggleButton = document.getElementById("toggle-password");
+
+        if (passwordField.type === "password") {
+            passwordField.type = "text";
+            toggleButton.textContent = "Hide Password";
+        } else {
+            passwordField.type = "password";
+            toggleButton.textContent = "Show Password";
+        }
+    }
+</script>
 </body>
 
 
 
 
 </html>
+        
+  
+
+ 
